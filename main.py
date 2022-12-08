@@ -24,12 +24,12 @@ class Sensor(BaseModel):
 @app.post("/sensor")
 async def upload_data(sensor:Sensor):
     sensor.timestamp = datetime.now()
-    json_compatible_item_data = jsonable_encoder(sensor)
-    data_sensor[len(data_sensor)] = json_compatible_item_data
+    json_compatible_item_data = jsonable_encoder(sensor)      
+    data_sensor[sensor.id] = json_compatible_item_data
     return JSONResponse(content=json_compatible_item_data)
 
 @app.get("/", response_class=HTMLResponse)
-async def read_item(request: Request, ):
+async def read_item(request: Request):
     print(data_sensor)
     return templates.TemplateResponse("item.html", {"request": request, "data_sensor":data_sensor})
 
