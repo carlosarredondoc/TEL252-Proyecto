@@ -1,9 +1,16 @@
 <html>
 <head>
-    <title>Item Details</title>
+    <title>Sensores:</title>
     <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
 </head>
 <body>
-    <h1>Item ID: {{ id }}</h1>
+    <center>
+    <h1>Item ID:</h1>
+    <ul id="sensores">
+        {% for sensor in data_sensor %}
+        <li>{{data_sensor[sensor].timestamp}} Sensor {{ data_sensor[sensor].id }}: {{data_sensor[sensor].temp}} °C</li>
+        {% endfor %}
+    </ul>
+    </center>
 </body>
 </html>

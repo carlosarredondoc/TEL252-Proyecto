@@ -1,3 +1,14 @@
 h1 {
-    color: green;
+    color: black;
 }
+
+#sensores{
+    width: 500px;
+    height: 600px;
+    overflow-y: scroll;
+   
+  }
+  
+  ul, ol{
+    padding: 40px;
+  }
