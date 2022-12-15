@@ -34,17 +34,18 @@ class Sensor(BaseModel):
 @app.post("/sensor")
 async def upload_data(sensor:Sensor):
     certificado=sensor.cert
+    # Controlar bloques de la firma
     try:
         ### ECDSA
-        certificado=bytes.fromhex(certificado)
-        vk2 = VerifyingKey.from_string(certificado, curve=BRAINPOOLP160r1)    
+        certificado=bytes.fromhex(certificado) # Decodicar verificador desde el sensor y comprobar la curva
+        vk2 = VerifyingKey.from_string(certificado, curve=BRAINPOOLP160r1)    # Verificación para ver firma
         if vk2.to_string()==certificado:
-            sensor.timestamp = datetime.now()
+            sensor.timestamp = datetime.now() 
             json_compatible_item_data   = jsonable_encoder(sensor)      
             data_sensor[sensor.id] = json_compatible_item_data
-            return JSONResponse(content=json_compatible_item_data)
+            return JSONResponse(content=json_compatible_item_data) # se muestra data en casa de ser aceptada la firma
         else:
-            return JSONResponse(status_code=403, content="Forbidden Request!")
+            return JSONResponse(status_code=403, content="Forbidden Request!") # se indica que no tiene acceso y se informa para tener control y no desplegar infomación inadecuada de un sensor
     except Exception:
         return JSONResponse(status_code=403, content="Forbidden Request!")
 
