@@ -1,0 +1,7 @@
+start  cmd.exe /k "C:/Users/vtejo/anaconda3/python.exe c:/Users/vtejo/OneDrive/Escritorio/Cripto/Proyecto/PFinal/client/TEL252-Proyecto/sensor1.py"
+start  cmd.exe /k "C:/Users/vtejo/anaconda3/python.exe c:/Users/vtejo/OneDrive/Escritorio/Cripto/Proyecto/PFinal/client/TEL252-Proyecto/sensor2.py"
+start  cmd.exe /k "C:/Users/vtejo/anaconda3/python.exe c:/Users/vtejo/OneDrive/Escritorio/Cripto/Proyecto/PFinal/client/TEL252-Proyecto/sensor3.py"
+start  cmd.exe /k "C:/Users/vtejo/anaconda3/python.exe c:/Users/vtejo/OneDrive/Escritorio/Cripto/Proyecto/PFinal/client/TEL252-Proyecto/sensor4.py"
+start  cmd.exe /k "C:/Users/vtejo/anaconda3/python.exe c:/Users/vtejo/OneDrive/Escritorio/Cripto/Proyecto/PFinal/client/TEL252-Proyecto/sensor5.py"
+start  cmd.exe /k "C:/Users/vtejo/anaconda3/python.exe c:/Users/vtejo/OneDrive/Escritorio/Cripto/Proyecto/PFinal/client/TEL252-Proyecto/sensor6.py"
+start  cmd.exe /k "C:/Users/vtejo/anaconda3/python.exe c:/Users/vtejo/OneDrive/Escritorio/Cripto/Proyecto/PFinal/client/TEL252-Proyecto/sensor7.py"
