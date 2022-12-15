@@ -35,7 +35,7 @@ class Sensor(BaseModel):
 async def upload_data(sensor:Sensor):
     certificado=sensor.cert
     try:
-        
+        ### ECDSA
         certificado=bytes.fromhex(certificado)
         vk2 = VerifyingKey.from_string(certificado, curve=BRAINPOOLP160r1)    
         if vk2.to_string()==certificado:
